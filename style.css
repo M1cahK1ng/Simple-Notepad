@@ -1,0 +1,238 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #00007A; /* Blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+main {
+    padding: 15px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h2 {
+    color: #3f51b5; /* Deeper blue */
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* For buttons side-by-side */
+    margin-bottom: 10px; /* For stacked buttons */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#addNoteBtn {
+    background-color: #007bff; /* Primary blue for add button */
+}
+#addNoteBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Form Elements */
+textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    min-height: 120px;
+    resize: vertical;
+}
+
+#saveNoteBtn {
+    background-color: #28a745; /* Success green */
+}
+#saveNoteBtn:hover {
+    background-color: #218838;
+}
+
+#cancelNoteBtn, #backToListBtn {
+    background-color: #6c757d; /* Grey */
+}
+#cancelNoteBtn:hover, #backToListBtn:hover {
+    background-color: #5a6268;
+}
+
+/* Note List Display */
+.note-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.note-card:hover {
+    background-color: #eef;
+    transform: translateY(-2px);
+}
+
+.note-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.note-card-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.note-card-actions button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.note-card-actions .edit-btn {
+    background-color: #ffc107; /* Warning yellow */
+    color: #333;
+}
+.note-card-actions .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.note-card-actions .delete-btn {
+    background-color: #dc3545; /* Danger red */
+}
+.note-card-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* View Note Section */
+#viewNoteContent {
+    background-color: #eef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+}
+
+.note-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#editViewNoteBtn {
+    background-color: #ffc107;
+    color: #333;
+}
+#editViewNoteBtn:hover {
+    background-color: #e0a800;
+}
+
+#deleteViewNoteBtn {
+    background-color: #dc3545;
+}
+#deleteViewNoteBtn:hover {
+    background-color: #c82333;
+}
+
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+#noNotesMessage {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    header h1 {
+        margin-bottom: 10px;
+    }
+    button {
+        width: auto;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .note-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .note-card h3 {
+        padding-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Take full width on small screens */
+    }
+    .note-card-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .note-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .note-actions button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

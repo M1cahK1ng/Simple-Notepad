@@ -1,0 +1,21 @@
+{
+    "name": "My Simple Log App",
+    "short_name": "My Log",
+    "description": "A simple mobile web app to record, store, and display notes.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2196F3",
+    "icons": [
+        {
+            "src": "Images/icons8-adobe-indesign-240.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Images/icons8-adobe-indesign-240.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
