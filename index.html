@@ -15,11 +15,19 @@
 <body>
     <header>
         <h1>My Simple Log</h1>
-        <button id="addNoteBtn"><i class="fas fa-plus"></i> Add New Note</button>
+        <div>
+            <button id="viewNotesBtn"><i class="fas fa-list"></i> View Notes</button>
+            <button id="addNoteBtn"><i class="fas fa-plus"></i> Add New Note</button>
+        </div>
     </header>
 
     <main>
-        <section id="noteListSection">
+        <section id="homeSection">
+            <h2>Welcome to My Simple Log!</h2>
+            <p>Click "Add New Note" to create a new note, or "View Notes" to see your list of notes.</p>
+        </section>
+
+        <section id="noteListSection" class="hidden">
             <h2>Your Notes</h2>
             <div id="notesContainer">
             </div>
@@ -30,6 +38,7 @@
             <h2><span id="noteFormTitle">Add New Note</span></h2>
             <form id="noteForm">
                 <input type="hidden" id="noteIdInput">
+                <input type="text" id="noteTitle" placeholder="Note Title" required>
                 <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
                 <button type="submit" id="saveNoteBtn">Save Note</button>
                 <button type="button" id="cancelNoteBtn">Cancel</button>
@@ -49,7 +58,7 @@
         </section>
     </main>
 
-    <script src="script.js?v=1.0"></script>
+    <script src="new-Script/script.js"></script>
 </body>
 
 </html>
